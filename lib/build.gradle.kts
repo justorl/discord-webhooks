@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "me.binarywriter"
-version = "1.0.3"
+version = "1.0.4"
 
 base {
     archivesName.set("discord-webhooks")
@@ -34,5 +34,13 @@ tasks.jar {
             "Implementation-Title" to "discord-webhooks",
             "Implementation-Version" to version,
         )
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
     }
 }
