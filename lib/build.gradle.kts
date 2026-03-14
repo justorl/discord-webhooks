@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "me.binarywriter"
-version = "1.0.4"
+version = "1.0.5"
 
 base {
     archivesName.set("discord-webhooks")
@@ -21,6 +21,10 @@ dependencies {
     implementation(kotlin("stdlib"))
     api("com.squareup.okhttp3:okhttp:5.3.2")
     api("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.10.0")
+}
+
+kotlin {
+    jvmToolchain(21)
 }
 
 java {
