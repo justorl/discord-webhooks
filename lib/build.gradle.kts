@@ -1,9 +1,9 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    kotlin("jvm") version "1.6.20"
+    kotlin("jvm") version "2.3.0"
 
     // Apply the org.jetbrains.kotlin.plugin.serialization Plugin
-    kotlin("plugin.serialization") version "1.6.20"
+    kotlin("plugin.serialization") version "2.3.0"
 
     // Maven Publish plugin - https://docs.gradle.org/current/userguide/publishing_maven.html
     id("maven-publish")

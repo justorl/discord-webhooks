@@ -47,7 +47,9 @@ data class Webhook(
      */
     fun send(url: String) =
         try {
-            HttpClient.post(url, json, files.mapValues { it.value.readBytes() }).code in 200..204
+            HttpClient.post(url, json, files.mapValues { it.value.readBytes() }).use {
+                it.code in 200..204
+            }
         } catch (ex: Exception) {
             false
         }
