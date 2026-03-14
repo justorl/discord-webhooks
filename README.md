@@ -16,7 +16,7 @@
     
     dependencies {
         //...
-        implementation 'com.github.justorl:discord-webhooks:1.0.2'
+        implementation 'com.github.justorl:discord-webhooks:1.0.6'
     }
 ```
 
@@ -36,7 +36,7 @@
             <dependency>
                 <groupId>com.github.justorl</groupId>
                 <artifactId>discord-webhooks</artifactId>
-                <version>1.0.2</version>
+                <version>1.0.6</version>
             </dependency>
         </dependencies>
     </project>
