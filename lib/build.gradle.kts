@@ -50,7 +50,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "me.binarywriter"
             artifactId = "discord-webhooks"
-            version = "1.0"
+            version = "1.0.1"
 
             from(components["java"])
         }
