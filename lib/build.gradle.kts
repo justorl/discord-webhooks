@@ -1,41 +1,26 @@
 plugins {
-    // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     kotlin("jvm") version "2.3.0"
-
-    // Apply the org.jetbrains.kotlin.plugin.serialization Plugin
     kotlin("plugin.serialization") version "2.3.0"
-
-    // Maven Publish plugin - https://docs.gradle.org/current/userguide/publishing_maven.html
     id("maven-publish")
 
-    // Apply the java-library plugin for API and implementation separation.
     `java-library`
 }
 
 group = "me.binarywriter"
-version = "1.0.2"
+version = "1.0.3"
 
 base {
     archivesName.set("discord-webhooks")
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
-    // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-
-    // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    // Used to send http requests
-    api("com.squareup.okhttp3", "okhttp", "4.9.3")
-
-    // Used for json serialization
-    api("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.3.2")
+    implementation(kotlin("stdlib"))
+    api("com.squareup.okhttp3:okhttp:5.3.2")
+    api("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.10.0")
 }
 
 java {
@@ -47,7 +32,7 @@ tasks.jar {
     manifest {
         attributes(
             "Implementation-Title" to "discord-webhooks",
-            "Implementation-Version" to "1.0.2"
+            "Implementation-Version" to version,
         )
     }
 }
