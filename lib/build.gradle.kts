@@ -12,6 +12,13 @@ plugins {
     `java-library`
 }
 
+group = "me.binarywriter"
+version = "1.0.2"
+
+base {
+    archivesName.set("discord-webhooks")
+}
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
