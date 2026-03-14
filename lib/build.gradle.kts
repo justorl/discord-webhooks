@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "me.binarywriter"
-version = "1.0.5"
+version = "1.0.6"
 
 base {
     archivesName.set("discord-webhooks")
