@@ -40,19 +40,7 @@ tasks.jar {
     manifest {
         attributes(
             "Implementation-Title" to "discord-webhooks",
-            "Implementation-Version" to "1.0"
+            "Implementation-Version" to "1.0.2"
         )
-    }
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "me.binarywriter"
-            artifactId = "discord-webhooks"
-            version = "1.0.1"
-
-            from(components["java"])
-        }
     }
 }

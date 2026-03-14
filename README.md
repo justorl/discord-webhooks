@@ -16,7 +16,7 @@
     
     dependencies {
         //...
-        implementation 'com.github.BinaryWriter:discord-webhooks:1.0'
+        implementation 'com.github.justorl:discord-webhooks:1.0.2'
     }
 ```
 
@@ -34,9 +34,9 @@
         <dependencies>
             <!-- ... -->
             <dependency>
-                <groupId>com.github.BinaryWriter</groupId>
+                <groupId>com.github.justorl</groupId>
                 <artifactId>discord-webhooks</artifactId>
-                <version>1.0</version>
+                <version>1.0.2</version>
             </dependency>
         </dependencies>
     </project>
