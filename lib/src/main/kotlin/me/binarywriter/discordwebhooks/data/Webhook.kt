@@ -49,4 +49,10 @@ data class Webhook(
         HttpClient.post(url, json, files.mapValues { it.value.readBytes() }).use {
             it.code in 200..204
         }
+
+    /**
+     * Sends [Webhook] to [url] asynchronously
+     */
+    fun sendAsync(url: String, callback: (Boolean) -> Unit = {}) =
+        HttpClient.postAsync(url, json, files.mapValues { it.value.readBytes() }, callback)
 }
